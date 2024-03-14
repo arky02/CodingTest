@@ -5,6 +5,5 @@ function solution(s) {
         if(Number(strArr[i])<=min) min = (strArr[i]);
         if(Number(strArr[i])>=max) max = (strArr[i]);
     }
-    answer = min + " " + max
-    return answer;
+    return min + " " + max;
 }
