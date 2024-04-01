@@ -5,3 +5,4 @@ function solution(clothes) {
     })
     return [...map.values()].reduce((a,c)=>a*c,1)-1
 }
+
