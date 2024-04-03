@@ -1,4 +1,1 @@
-function solution(M, N) {
-    var answer = 0;
-    return M*N-1;
-}
+const solution = (M, N) => M*N-1;
