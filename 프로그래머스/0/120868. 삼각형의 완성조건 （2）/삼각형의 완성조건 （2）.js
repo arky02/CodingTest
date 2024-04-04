@@ -1,0 +1,1 @@
+const solution = ([a,b]) => (a> b) ? 2*b-1 : 2*a-1;
