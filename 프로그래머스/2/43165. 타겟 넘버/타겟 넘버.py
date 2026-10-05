@@ -1,20 +1,17 @@
-distance = []
+answer = 0
 
-def dfs(numbers, currIdx, currDist):
-    if currIdx+1 == len(numbers):
-        distance.append(currDist)
-        return
-    dfs(numbers, currIdx+1, currDist+numbers[currIdx+1])
-    dfs(numbers, currIdx+1, currDist+(-1*numbers[currIdx+1]))
+def dfs(nums, idx, acc, target):
+    ret = 0
+    
+    if idx == len(nums):
+        if acc == target: return 1
+        return 0
+    
+    ret += dfs(nums, idx+1, acc+nums[idx], target)
+    ret += dfs(nums, idx+1, acc+(-1*nums[idx]), target)
+    
+    return ret
     
 def solution(numbers, target):
-    answer = 0
-    
-    dfs(numbers, 0, numbers[0])
-    dfs(numbers, 0, -1*numbers[0])
-    
-    for result in distance:
-        if result == target:
-            answer +=1
-        
+    answer = dfs(numbers, 0, 0, target)
     return answer
