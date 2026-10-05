@@ -1,5 +1,3 @@
-answer = 0
-
 def dfs(nums, idx, acc, target):
     ret = 0
     
