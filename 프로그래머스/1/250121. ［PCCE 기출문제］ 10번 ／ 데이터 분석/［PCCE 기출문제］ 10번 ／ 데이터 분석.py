@@ -1,19 +1,14 @@
-dict = {
-    "code": 0,
-    "date": 1,
-    "maximum": 2,
-    "remain": 3
-}
-    
+code = ["code", "date", "maximum", "remain"]
+
 def solution(data, ext, val_ext, sort_by):
     index = len(data)-1
-    data.sort(key=lambda x: x[dict[ext]])
+    data.sort(key=lambda x: x[code.index(ext)])
     
     for idx, x in enumerate(data): 
-        if x[dict[ext]] >= val_ext: 
+        if x[code.index(ext)] >= val_ext: 
             index = idx
             break
     
     data = data[:index]
-    data.sort(key=lambda x: x[dict[sort_by]])
+    data.sort(key=lambda x: x[code.index(sort_by)])
     return data
