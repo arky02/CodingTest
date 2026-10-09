@@ -8,7 +8,5 @@ def solution(data, ext, val_ext, sort_by):
         if x[code.index(ext)] >= val_ext: 
             index = idx
             break
-    
-    data = data[:index]
-    data.sort(key=lambda x: x[code.index(sort_by)])
-    return data
+            
+    return sorted(data[:index], key=lambda x: x[code.index(sort_by)])
