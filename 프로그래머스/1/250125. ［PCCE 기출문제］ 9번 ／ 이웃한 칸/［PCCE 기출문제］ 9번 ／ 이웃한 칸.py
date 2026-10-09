@@ -5,11 +5,9 @@ def solution(board, h, w):
     answer = 0
     
     for i in range(4):
-        x = h+dr[i]
-        y = w+dc[i] 
-        
+        x, y = h+dr[i], w+dc[i]
         if 0<=x<n and 0<=y<n:
-            if board[x][y] == board[h][w]: answer += 1
+            if board[x][y] == board[h][w]: answer += 1 
             
     return answer
         
